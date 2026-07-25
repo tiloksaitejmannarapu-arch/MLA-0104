@@ -15,7 +15,7 @@ Each program includes:
 - Output screenshots
 
 
-# 1. Breadth First Search (BFS)
+ 1. Breadth First Search (BFS)
 
 ## Problem
 
@@ -78,7 +78,7 @@ BFS(Graph, StartNode)
                   Add neighbour to queue
 
 
-## Use Cases
+Use Cases
 
 - Finding the shortest path in an unweighted graph
 - Social networking applications for finding connections
@@ -88,26 +88,26 @@ BFS(Graph, StartNode)
 - Peer-to-peer network searching
 - Level-order traversal of trees
 
-## Advantages
+Advantages
 
 - Finds the shortest path in an unweighted graph.
 - Simple and easy to implement.
 - Complete when the search space is finite.
 
-## Limitation
+ Limitation
 
 - Requires more memory because it stores many nodes in the queue.
 - Can be inefficient for very large search spaces.
 
 
 
-# 2. Depth First Search (DFS)
+ 2. Depth First Search (DFS)
 
-## Problem
+Problem
 
 Traverse a graph using **Depth First Search (DFS)**.
 
-## Explanation
+ Explanation
 
 **Depth First Search (DFS)** is an uninformed search algorithm that explores a graph by going as **deep as possible along one branch** before backtracking.
 
@@ -115,7 +115,7 @@ DFS can be implemented using a **Stack** or **Recursion**.
 
 Unlike BFS, which explores nodes level by level, DFS follows one path deeply until it reaches a dead end. It then backtracks and explores another path.
 
-## How It Works
+How It Works
 
 1. Select a starting node.
 2. Mark the node as visited.
@@ -126,7 +126,7 @@ Unlike BFS, which explores nodes level by level, DFS follows one path deeply unt
 7. Backtrack to the previous node.
 8. Explore the remaining unvisited branches.
 
-## Key Concept
+Key Concept
 
 ```text
 DFS
@@ -155,7 +155,7 @@ DFS(Graph, Node, Visited)
             Call DFS(Graph, neighbour, Visited)
 
 
-## Use Cases
+ Use Cases
 
 - Maze solving
 - Path finding
@@ -166,14 +166,14 @@ DFS(Graph, Node, Visited)
 - Exploring file and folder structures
 - Backtracking problems
 
-## Advantages
+ Advantages
 
 - Requires less memory than BFS in many cases.
 - Simple to implement using recursion.
 - Useful for exploring deep search spaces.
 - Effective for backtracking problems.
 
-## Limitation
+ Limitation
 
 - Does not always find the shortest path.
 - Can get stuck exploring a very deep branch.
@@ -181,13 +181,13 @@ DFS(Graph, Node, Visited)
 
 
 
-# 3. Uniform Cost Search (UCS)
+3. Uniform Cost Search (UCS)
 
-## Problem
+ Problem
 
 Find the **least-cost path** from a start node to a goal node in a weighted graph.
 
-## Explanation
+ Explanation
 
 **Uniform Cost Search (UCS)** is an uninformed search algorithm that always expands the node with the **lowest total path cost** from the starting node.
 
@@ -197,7 +197,7 @@ It uses a **Priority Queue**, where the node with the smallest path cost is sele
 
 Unlike BFS, which mainly considers the number of edges, UCS considers the **actual cost of reaching a node**.
 
-## How It Works
+ How It Works
 
 1. Start from the initial node with cost `0`.
 2. Add the starting node to the priority queue.
@@ -208,7 +208,7 @@ Unlike BFS, which mainly considers the number of edges, UCS considers the **actu
 7. Add the neighbours with their updated costs to the priority queue.
 8. Repeat until the goal is found.
 
-## Key Concept
+ Key Concept
 
 ```text
 UCS
@@ -220,7 +220,7 @@ Lowest Path Cost First
 Optimal Cost Path
 
 
-## Pseudocode
+ Pseudocode
 
 ```text
 UCS(Graph, Start, Goal)
@@ -252,7 +252,7 @@ UCS(Graph, Start, Goal)
             Add (neighbour, new cost) to queue
 
 
-## Use Cases
+ Use Cases
 
 - Finding the cheapest route in a transportation network
 - Network routing based on communication cost
@@ -261,27 +261,25 @@ UCS(Graph, Start, Goal)
 - Logistics and delivery route planning
 - Resource optimization problems
 
-## Advantages
+ Advantages
 
 - Finds the least-cost path.
 - Works well with different edge costs.
 - Complete when step costs are positive.
 
-## Limitation
+Limitation
 
 - Can be slower than heuristic-based algorithms.
 - May explore many unnecessary nodes.
 - Requires priority queue management.
 
+ 4. Water Jug Problem
 
-
-# 4. Water Jug Problem
-
-## Problem
+ Problem
 
 Measure a target amount of water using two jugs of given capacities.
 
-## Explanation
+ Explanation
 
 The **Water Jug Problem** is a classic **state-space search problem** in Artificial Intelligence.
 
@@ -311,7 +309,7 @@ The initial state is:
 
 The algorithm generates new states by performing valid operations.
 
-## Possible Operations
+Possible Operations
 
 - Fill Jug 1
 - Fill Jug 2
@@ -322,7 +320,7 @@ The algorithm generates new states by performing valid operations.
 
 The search continues until the target amount is reached.
 
-## How It Works
+ How It Works
 
 1. Start with state `(0,0)`.
 2. Add the initial state to the queue.
@@ -333,7 +331,7 @@ The search continues until the target amount is reached.
 7. Add new states to the queue.
 8. Continue until the target state is reached.
 
-## Key Concept
+ Key Concept
 
 ```text
 Water Jug Problem
@@ -384,7 +382,7 @@ WaterJug(Jug1Capacity, Jug2Capacity, Target)
 6. Add each new unvisited state to the queue
 
 
-## Use Cases
+Use Cases
 
 - AI state-space problem solving
 - Planning and decision-making systems
@@ -393,25 +391,25 @@ WaterJug(Jug1Capacity, Jug2Capacity, Target)
 - Resource measurement problems
 - Demonstrating search algorithms in AI education
 
-## Advantages
+ Advantages
 
 - Demonstrates state-space representation clearly.
 - Useful for understanding AI problem-solving.
 - Can find a solution by exploring possible states.
 
-## Limitation
+ Limitation
 
 - The number of states can increase as problem complexity grows.
 - Requires tracking visited states to avoid loops.
 
 
-# 5. A* Search Algorithm
+5. A* Search Algorithm
 
-## Problem
+ Problem
 
 Find the **optimal path** from a start node to a goal node in a weighted graph using A* Search.
 
-## Explanation
+Explanation
 
 **A* (A-Star) Search** is an informed search algorithm that uses both the **actual path cost** and a **heuristic estimate** to find an optimal path.
 
@@ -433,7 +431,7 @@ f(n) = Total estimated cost
 
 The algorithm selects the node with the lowest `f(n)` value.
 
-## How It Works
+ How It Works
 
 1. Add the starting node to the open list.
 2. Set the starting node's actual cost `g(n)` to `0`.
@@ -446,7 +444,7 @@ The algorithm selects the node with the lowest `f(n)` value.
 9. Update the path if a better route is found.
 10. Continue until the goal is reached.
 
-## Key Concept
+ Key Concept
 
 ```text
 A*
@@ -496,7 +494,7 @@ AStar(Graph, Heuristic, Start, Goal)
                   Add neighbour to open_list
 
 
-## Use Cases
+Use Cases
 
 - GPS navigation systems
 - Google Maps-style route planning
@@ -507,14 +505,14 @@ AStar(Graph, Heuristic, Start, Goal)
 - Network routing
 - Artificial intelligence planning systems
 
-## Advantages
+Advantages
 
 - Usually faster than uninformed search algorithms.
 - Uses domain knowledge through heuristics.
 - Can find an optimal path when the heuristic is appropriate.
 - Efficient for many path-finding problems.
 
-## Limitation
+Limitation
 
 - Performance depends on the quality of the heuristic.
 - Requires additional memory for maintaining search lists.
@@ -522,13 +520,13 @@ AStar(Graph, Heuristic, Start, Goal)
 
 
 
-# 6. Alpha-Beta Pruning
+6. Alpha-Beta Pruning
 
-## Problem
+ Problem
 
 Optimize the **Minimax algorithm** by eliminating branches of the game tree that cannot influence the final decision.
 
-## Explanation
+Explanation
 
 **Alpha-Beta Pruning** is an optimization technique used with the **Minimax algorithm**.
 
@@ -556,7 +554,7 @@ Beta ≤ Alpha
 
 the remaining branches can be safely ignored or **pruned**.
 
-## How It Works
+ How It Works
 
 1. Start with `Alpha = -∞`.
 2. Start with `Beta = +∞`.
@@ -568,7 +566,7 @@ the remaining branches can be safely ignored or **pruned**.
 8. If `Beta ≤ Alpha`, prune the remaining branch.
 9. Return the best value.
 
-## Key Concept
+ Key Concept
 
 text
 Alpha-Beta Pruning
@@ -642,7 +640,7 @@ AlphaBeta(depth, nodeIndex, maximizingPlayer, values, alpha, beta)
        Return best
 
 
-## Use Cases
+ Use Cases
 
 - Chess-playing AI
 - Tic-Tac-Toe AI
@@ -659,7 +657,7 @@ AlphaBeta(depth, nodeIndex, maximizingPlayer, values, alpha, beta)
 - Produces the same optimal result as Minimax.
 - Allows deeper game-tree searches.
 
-## Limitation
+ Limitation
 
 - Most effective when good moves are evaluated first.
 - Still computationally expensive for very large game trees.
@@ -667,13 +665,13 @@ AlphaBeta(depth, nodeIndex, maximizingPlayer, values, alpha, beta)
 
 
 
-# 7. Minimax Algorithm
+ 7. Minimax Algorithm
 
-## Problem
+ Problem
 
 Determine the best possible move for a player in a two-player game by assuming that both players play optimally.
 
-## Explanation
+Explanation
 
 **Minimax** is a decision-making algorithm used in **two-player, zero-sum games**.
 
@@ -697,7 +695,7 @@ The algorithm creates a **game tree** representing possible moves and evaluates 
 
 The MAX player chooses the highest value, while the MIN player chooses the lowest value.
 
-## How It Works
+ How It Works
 
 1. Start from the current game state.
 2. Generate all possible moves.
@@ -709,7 +707,7 @@ The MAX player chooses the highest value, while the MIN player chooses the lowes
 8. Propagate the values back to the root.
 9. Select the best move.
 
-## Key Concept
+Key Concept
 
 ```text
 MAX Player → Select Maximum Value
@@ -761,7 +759,7 @@ Minimax(node, depth, maximizingPlayer)
 4. Select the move with the best Minimax value
 
 
-## Use Cases
+Use Cases
 
 - Chess AI
 - Tic-Tac-Toe
@@ -772,14 +770,14 @@ Minimax(node, depth, maximizingPlayer)
 - Competitive decision-making systems
 - Game-playing intelligent agents
 
-## Advantages
+ Advantages
 
 - Provides optimal decision-making when the complete game tree is available.
 - Simple and conceptually easy to understand.
 - Useful for two-player competitive games.
 - Forms the foundation for more advanced game-playing algorithms.
 
-## Limitation
+ Limitation
 
 - Can be computationally expensive.
 - Requires large amounts of computation for complex games.
