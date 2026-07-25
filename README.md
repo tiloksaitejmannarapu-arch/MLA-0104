@@ -1,6 +1,6 @@
 # MLA0104 – Artificial Intelligence & Expert Systems 
 
-This repository contains implementations of **Artificial Intelligence and Expert Systems (AI & ES)** laboratory programs using **Python**.
+This repository contains implementations of **Artificial Intelligence and Expert Systems  laboratory programs using **Python**.
 
 The programs demonstrate important Artificial Intelligence concepts such as **graph traversal, uninformed search, state-space search, heuristic search, and game-playing algorithms**.
 
