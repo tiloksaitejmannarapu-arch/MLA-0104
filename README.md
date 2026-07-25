@@ -1,18 +1,4 @@
-# MLA0104 – Artificial Intelligence & Expert Systems 
 
-This repository contains implementations of **Artificial Intelligence and Expert Systems  laboratory programs using **Python**.
-
-The programs demonstrate important Artificial Intelligence concepts such as **graph traversal, uninformed search, state-space search, heuristic search, and game-playing algorithms**.
-
-Each program includes:
-
-- Python source code (`.py`)
-- Problem statement
-- Algorithm explanation
-- Step-by-step working
-- Pseudocode
-- Use cases
-- Output screenshots
 
 
  1. Breadth First Search (BFS)
