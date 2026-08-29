@@ -1,0 +1,21 @@
+?- cooling_system_fault(v101).
+true
+
+?- diagnose(v101, Fault, Rec).
+Fault = cooling_system_fault,
+Rec = inspect_radiator_coolant.
+
+?- diagnose(v102, Fault, Rec).
+Fault = starting_system_fault,
+Rec = inspect_battery_starter.
+
+?- diagnose(v103, Fault, Rec).
+Fault = engine_internal_fault,
+Rec = inspect_engine_internals.
+
+?- diagnose(v104, Fault, Rec).
+Fault = fuel_efficiency_fault,
+Rec = replace_filter_service_fuel_system.
+
+?- findall(V-F, (member(V,[v101,v102,v103,v104]), diagnose(V,F,_)), Results).
+Results = [v101-cooling_system_fault,v102-starting_system_fault,v103-engine_internal_fault,v104-fuel_efficiency_fault].
